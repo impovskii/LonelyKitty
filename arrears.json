@@ -1,0 +1,10 @@
+{
+    "studies": 32000,
+    "paul": 14000,
+    "food": 10000,
+    "rent": 20000,
+    "payment_studies": 0,
+    "payment_paul": 0,
+    "payment_food": 0,
+    "payment_rent": 0
+}

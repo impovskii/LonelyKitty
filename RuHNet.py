@@ -3,7 +3,6 @@ import time
 import os
 from art import tprint
 from colorama import init, Style, Fore
-from simple_term_menu import TerminalMenu
 import tabulate
 from faker import Faker
 import wget
@@ -66,13 +65,41 @@ def startsearch():
     startnet()
 
 
+def startinfo():
+    os.system('cls||clear')
+
+    with open('info.json', 'r') as json_file:
+        info = json.load(json_file)
+        money = info['money']
+        comp_order = info['completed_orders']
+
+    print(Fore.RED + "        Ваш профиль:" + Style.RESET_ALL)
+    print(f"Баланс: {money}₽")
+    print(f"Выполнено заказов: {comp_order}")
+    print(Fore.GREEN + "               ..." + Style.RESET_ALL)
+
+    a = input("$ ")
+    startnet()
+
+def startfeedback():
+    os.system('cls||clear')
+
+
+
+
 def startnet():
     os.system('cls||clear')
-    tprint("Ruhnet")
+    tprint("RuHNet")
     a = input("$ ")
     if a == "search":
         startsearch()
     elif a == "info":
         startinfo()
+    elif a =="feedback":
+        startmyaccount()
+    else:
+        print("Неккоректно")
+        time.sleep(0.5)
+        startnet()
 
 startnet()
