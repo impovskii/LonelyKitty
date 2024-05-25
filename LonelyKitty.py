@@ -9,8 +9,10 @@ from faker import Faker
 import wget
 import pygame
 import random
+import json
 
 pygame.mixer.init()
+pygame.init()
 
 init()
 
@@ -150,6 +152,47 @@ def startsell():
     console()
 
 
+def startorder():
+    os.system("cls||clear")
+    with open('data.json', 'r') as json_file:
+        data = json.load(json_file)
+        order_name = data['name']
+        order_prise = data['prise']
+        order_relevance = data['relevance']
+
+    if order_relevance == True:
+        print(Fore.RED + "        Информация о заказе:" + Style.RESET_ALL)
+        print(f"ФИО жертвы: {order_name}")
+        print(f"Цена заказа: {order_prise}₽")
+        print(Fore.GREEN + "               Активно" + Style.RESET_ALL)
+    else:
+        print("У вас нету активных заказов!")
+
+    a = input("$ ")
+    console()
+
+
+def startorderhack():
+    os.system('cls||clear')
+
+    random_num_one = random.randint(1, 9)
+    random_num_two = random.randint(1, 9)
+    random_num_three = random.randint(1, 9)
+    random_num_four = random.randint(1, 9)
+    random_num_five = random.randint(1, 9)
+    random_num_six = random.randint(1, 9)
+    random_num_seven = random.randint(1, 9)
+    random_num_eight = random.randint(1, 9)
+    random_num_nine = random.randint(1, 9)
+
+    print("autohack")
+    print("")
+    print(f"+7 (9{random_num_one}{random_num_two}) {random_num_three}{random_num_four}{random_num_five} {random_num_six}{random_num_seven} {random_num_eight}{random_num_nine}")
+
+    a = input("$ ")
+    console()
+
+
 def console():
     os.system("cls||clear")
 
@@ -170,6 +213,10 @@ def console():
         startdata()
     elif a == "sell":
         startsell()
+    elif a == "order":
+        startorder()
+    elif a == "orderhack":
+        startorderhack()
     else: 
         print("Неккоректно")
         time.sleep(0.5)
