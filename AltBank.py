@@ -116,8 +116,6 @@ def startbank():
         startbalance()
     elif a == "moneybox":
         startmoneybox()
-    elif a =="feedback":
-        startmyaccount()
     else:
         print("Неккоректно")
         time.sleep(0.5)

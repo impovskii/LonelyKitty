@@ -16,6 +16,8 @@ pygame.init()
 
 fake = Faker("RU_ru")
 
+Name = os.getlogin()
+
 init()
 
 pygame.mixer.music.load("system.mp3")
@@ -28,7 +30,7 @@ def startsearch():
     os.system('cls||clear')
 
     random_name = fake.name()
-    random_prise = random.randint(150, 423)
+    random_prise = random.randint(950, 2850)
 
     barsearchone = pb.ChargingBar("Находим подходящий заказ...")
     for i in range(100):
@@ -70,11 +72,10 @@ def startinfo():
 
     with open('info.json', 'r') as json_file:
         info = json.load(json_file)
-        money = info['money']
         comp_order = info['completed_orders']
 
     print(Fore.RED + "        Ваш профиль:" + Style.RESET_ALL)
-    print(f"Баланс: {money}₽")
+    print(f"Ваш ник: {Name}")
     print(f"Выполнено заказов: {comp_order}")
     print(Fore.GREEN + "               ..." + Style.RESET_ALL)
 

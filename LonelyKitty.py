@@ -9,9 +9,7 @@ import wget
 import pygame
 import random
 import json
-import keyboard
 
-#keyboard = Controller()
 
 pygame.mixer.init()
 pygame.init()
@@ -75,22 +73,6 @@ def startrping():
     console()
 
 
-def startsell():
-    os.system("cls||clear")
-
-    barsell = pb.ChargingBar("Продаем...", max=100)
-    for i in range(100):
-        barsell.next()
-        time.sleep(0.05)
-    barsell.finish()
-
-    print("~$sell", Fore.GREEN + "[True]" + Style.RESET_ALL)
-    sound_sell.play()
-
-    a = input("$ ")
-    console()
-
-
 def startorder():
     os.system("cls||clear")
     with open('data.json', 'r') as json_file:
@@ -131,176 +113,204 @@ def dataplus():
         json.dump(data, file, indent=4)
 
 
-def startorderhack():
+def starthack():
     os.system('cls||clear')
 
-    random_num_one = random.randint(1, 9)
-    random_num_two = random.randint(1, 9)
-    random_num_three = random.randint(1, 9)
-    random_num_four = random.randint(1, 9)
-    random_num_five = random.randint(1, 9)
-    random_num_six = random.randint(1, 9)
-    random_num_seven = random.randint(1, 9)
-    random_num_eight = random.randint(1, 9)
-    random_num_nine = random.randint(1, 9)
+    with open('data.json', 'r') as json_file:
+        data = json.load(json_file)
+        order_relevance = data['relevance']
 
-    print("autohack")
-    print("")
-    print(f"+7 (9**) *** ** **")
+    with open('info.json', 'r') as json_file:
+        info = json.load(json_file)
+        completed_orders = info['completed_orders']
+        money = info['money']
 
-    i = 0
-    while i == 0:
-        print(random_num_one)
+    if completed_orders == 3:
+        furst_file = open("Тестордеры.txt", "w+")
+        furst_file.write(deadcat1 + "\n")
+        furst_file.write(deadcat2 + "\n")
+        furst_file.write(deadcat3 + "\n")
+        furst_file.close()
+
+    if money >= 4000:
+        furst_file = open("Тестденьги.txt", "w+")
+        furst_file.write(deadcat1 + "\n")
+        furst_file.write(deadcat2 + "\n")
+        furst_file.write(deadcat3 + "\n")
+        furst_file.close()
+
+    if order_relevance == True:
+
+        random_num_one = random.randint(1, 9)
+        random_num_two = random.randint(1, 9)
+        random_num_three = random.randint(1, 9)
+        random_num_four = random.randint(1, 9)
+        random_num_five = random.randint(1, 9)
+        random_num_six = random.randint(1, 9)
+        random_num_seven = random.randint(1, 9)
+        random_num_eight = random.randint(1, 9)
+        random_num_nine = random.randint(1, 9)
+
+        print("autohack")
+        print("")
+        print(f"+7 (9**) *** ** **")
+
+        i = 0
+        while i == 0:
+            print(random_num_one)
+            a = input("$ ")
+            c = int(a)
+            if c == random_num_one:
+                os.system('cls||clear')
+                print("autohack")
+                print("")
+                print(f"+7 (9{random_num_one}*) *** ** **")
+            else:
+                os.system('cls||clear')
+                print("~$Hack ", Fore.RED + "[Error]" + Style.RESET_ALL)
+                sound_error.play()
+                time.sleep(1)
+                starthack()
+
+            print(random_num_two)
+            a = input("$ ")
+            c = int(a)
+
+            if c == random_num_two:
+                os.system('cls||clear')
+                print("autohack")
+                print("")
+                print(f"+7 (9{random_num_one}{random_num_two}) *** ** **")
+            else:
+                os.system('cls||clear')
+                print("~$Hack ", Fore.RED + "[Error]" + Style.RESET_ALL)
+                sound_error.play()
+                time.sleep(1)
+                starthack()
+
+            print(random_num_three)
+            a = input("$ ")
+            c = int(a)
+
+            if c == random_num_three:
+                os.system('cls||clear')
+                print("autohack")
+                print("")
+                print(f"+7 (9{random_num_one}{random_num_two}) {random_num_three}** ** **")
+            else:
+                os.system('cls||clear')
+                print("~$Hack ", Fore.RED + "[Error]" + Style.RESET_ALL)
+                sound_error.play()
+                time.sleep(1)
+                starthack()
+
+            print(random_num_four)
+            a = input("$ ")
+            c = int(a)
+
+            if c == random_num_four:
+                os.system('cls||clear')
+                print("autohack")
+                print("")
+                print(f"+7 (9{random_num_one}{random_num_two}) {random_num_three}{random_num_four}* ** **")
+            else:
+                os.system('cls||clear')
+                print("~$Hack ", Fore.RED + "[Error]" + Style.RESET_ALL)
+                sound_error.play()
+                time.sleep(1)
+                starthack()
+
+            print(random_num_five)
+            a = input("$ ")
+            c = int(a)
+
+            if c == random_num_five:
+                os.system('cls||clear')
+                print("autohack")
+                print("")
+                print(f"+7 (9{random_num_one}{random_num_two}) {random_num_three}{random_num_four}{random_num_five} ** **")
+            else:
+                os.system('cls||clear')
+                print("~$Hack ", Fore.RED + "[Error]" + Style.RESET_ALL)
+                sound_error.play()
+                time.sleep(1)
+                starthack()
+
+            print(random_num_six)
+            a = input("$ ")
+            c = int(a)
+
+            if c == random_num_six:
+                os.system('cls||clear')
+                print("autohack")
+                print("")
+                print(f"+7 (9{random_num_one}{random_num_two}) {random_num_three}{random_num_four}{random_num_five} {random_num_six}* **")
+            else:
+                os.system('cls||clear')
+                print("~$Hack ", Fore.RED + "[Error]" + Style.RESET_ALL)
+                sound_error.play()
+                time.sleep(1)
+                starthack()
+
+            print(random_num_seven)
+            a = input("$ ")
+            c = int(a)
+
+            if c == random_num_seven:
+                os.system('cls||clear')
+                print("autohack")
+                print("")
+                print(f"+7 (9{random_num_one}{random_num_two}) {random_num_three}{random_num_four}{random_num_five} {random_num_six}{random_num_seven} **")
+            else:
+                os.system('cls||clear')
+                print("~$Hack ", Fore.RED + "[Error]" + Style.RESET_ALL)
+                sound_error.play()
+                time.sleep(1)
+                starthack()
+
+            print(random_num_eight)
+            a = input("$ ")
+            c = int(a)
+
+            if c == random_num_eight:
+                os.system('cls||clear')
+                print("autohack")
+                print("")
+                print(f"+7 (9{random_num_one}{random_num_two}) {random_num_three}{random_num_four}{random_num_five} {random_num_six}{random_num_seven} {random_num_eight}*")
+            else:
+                os.system('cls||clear')
+                print("~$Hack ", Fore.RED + "[Error]" + Style.RESET_ALL)
+                sound_error.play()
+                time.sleep(1)
+                starthack()
+
+
+            print(random_num_nine)
+            a = input("$ ")
+            c = int(a)
+
+            if c == random_num_nine:
+                os.system('cls||clear')
+                print("autohack")
+                print("")
+                print(f"+7 (9{random_num_one}{random_num_two}) {random_num_three}{random_num_four}{random_num_five} {random_num_six}{random_num_seven} {random_num_eight}{random_num_eight}")
+                i += 1
+            else:
+                os.system('cls||clear')
+                print("~$Hack ", Fore.RED + "[Error]" + Style.RESET_ALL)
+                sound_error.play()
+                time.sleep(1)
+                starthack()
+
+        print("Вы успешно выполнили заказ!")
+        dataplus()
+
+        console()
+
+    else:
+        print("У вас нету заказов!")
         a = input("$ ")
-        c = int(a)
-        if c == random_num_one:
-            os.system('cls||clear')
-            print("autohack")
-            print("")
-            print(f"+7 (9{random_num_one}*) *** ** **")
-        else:
-            os.system('cls||clear')
-            print("~$Hack ", Fore.RED + "[Error]" + Style.RESET_ALL)
-            sound_error.play()
-            time.sleep(1)
-            startorderhack()
-
-        print(random_num_two)
-        a = input("$ ")
-        c = int(a)
-
-        if c == random_num_two:
-            os.system('cls||clear')
-            print("autohack")
-            print("")
-            print(f"+7 (9{random_num_one}{random_num_two}) *** ** **")
-        else:
-            os.system('cls||clear')
-            print("~$Hack ", Fore.RED + "[Error]" + Style.RESET_ALL)
-            sound_error.play()
-            time.sleep(1)
-            startorderhack()
-
-        print(random_num_three)
-        a = input("$ ")
-        c = int(a)
-
-        if c == random_num_three:
-            os.system('cls||clear')
-            print("autohack")
-            print("")
-            print(f"+7 (9{random_num_one}{random_num_two}) {random_num_three}** ** **")
-        else:
-            os.system('cls||clear')
-            print("~$Hack ", Fore.RED + "[Error]" + Style.RESET_ALL)
-            sound_error.play()
-            time.sleep(1)
-            startorderhack()
-
-        print(random_num_four)
-        a = input("$ ")
-        c = int(a)
-
-        if c == random_num_four:
-            os.system('cls||clear')
-            print("autohack")
-            print("")
-            print(f"+7 (9{random_num_one}{random_num_two}) {random_num_three}{random_num_four}* ** **")
-        else:
-            os.system('cls||clear')
-            print("~$Hack ", Fore.RED + "[Error]" + Style.RESET_ALL)
-            sound_error.play()
-            time.sleep(1)
-            startorderhack()
-
-        print(random_num_five)
-        a = input("$ ")
-        c = int(a)
-
-        if c == random_num_five:
-            os.system('cls||clear')
-            print("autohack")
-            print("")
-            print(f"+7 (9{random_num_one}{random_num_two}) {random_num_three}{random_num_four}{random_num_five} ** **")
-        else:
-            os.system('cls||clear')
-            print("~$Hack ", Fore.RED + "[Error]" + Style.RESET_ALL)
-            sound_error.play()
-            time.sleep(1)
-            startorderhack()
-
-        print(random_num_six)
-        a = input("$ ")
-        c = int(a)
-
-        if c == random_num_six:
-            os.system('cls||clear')
-            print("autohack")
-            print("")
-            print(f"+7 (9{random_num_one}{random_num_two}) {random_num_three}{random_num_four}{random_num_five} {random_num_six}* **")
-        else:
-            os.system('cls||clear')
-            print("~$Hack ", Fore.RED + "[Error]" + Style.RESET_ALL)
-            sound_error.play()
-            time.sleep(1)
-            startorderhack()
-
-        print(random_num_seven)
-        a = input("$ ")
-        c = int(a)
-
-        if c == random_num_seven:
-            os.system('cls||clear')
-            print("autohack")
-            print("")
-            print(f"+7 (9{random_num_one}{random_num_two}) {random_num_three}{random_num_four}{random_num_five} {random_num_six}{random_num_seven} **")
-        else:
-            os.system('cls||clear')
-            print("~$Hack ", Fore.RED + "[Error]" + Style.RESET_ALL)
-            sound_error.play()
-            time.sleep(1)
-            startorderhack()
-
-        print(random_num_eight)
-        a = input("$ ")
-        c = int(a)
-
-        if c == random_num_eight:
-            os.system('cls||clear')
-            print("autohack")
-            print("")
-            print(f"+7 (9{random_num_one}{random_num_two}) {random_num_three}{random_num_four}{random_num_five} {random_num_six}{random_num_seven} {random_num_eight}*")
-        else:
-            os.system('cls||clear')
-            print("~$Hack ", Fore.RED + "[Error]" + Style.RESET_ALL)
-            sound_error.play()
-            time.sleep(1)
-            startorderhack()
-
-
-        print(random_num_nine)
-        a = input("$ ")
-        c = int(a)
-
-        if c == random_num_nine:
-            os.system('cls||clear')
-            print("autohack")
-            print("")
-            print(f"+7 (9{random_num_one}{random_num_two}) {random_num_three}{random_num_four}{random_num_five} {random_num_six}{random_num_seven} {random_num_eight}{random_num_eight}")
-            i += 1
-        else:
-            os.system('cls||clear')
-            print("~$Hack ", Fore.RED + "[Error]" + Style.RESET_ALL)
-            sound_error.play()
-            time.sleep(1)
-            startorderhack()
-
-    print("Вы успешно выполнили заказ!")
-    dataplus()
-
-
-
-    console()
+        console()
 
 
 def console():
@@ -314,11 +324,9 @@ def console():
     elif a == "r_ping":
         startrping()
     elif a == "hack":
-        startorderhack()
+        starthack()
     elif a == "hackeasy": #можно удалить
         starthackeasy()
-    elif a == "sell":
-        startsell()
     elif a == "order":
         startorder()
     else: 
