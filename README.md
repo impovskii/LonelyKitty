@@ -7,43 +7,8 @@
 
 ## Установка библиотек:
   ```python
-pip install progress.bar
+pip install progress.bar time os art colorama tabulate faker wget pygame random json matplotlib
 ```
-```python
-pip install time
-```
-```python
-pip install os
-```
-```python
-pip install art
-```
-```python
-pip install colorama
-```
-```python
-pip install tabulate
-```
-```python
-pip install faker
-```
-```python
-pip install wget
-```
-```python
-pip install pygame
-```
-```python
-pip install random
-```
-```python
-pip install json
-```
-```python
-pip install matplotlib
-```
-
-
 # Как начать играть
 Чтобы запустить игру вам нужно зайти в cmd, перейти в папку с игрой при помощи команды ```cd "путь до игры"``` после вставить ```python LonelyKitty.py```, ```python RuHNet.py```, ```python AltBank.py```
 
