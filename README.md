@@ -27,15 +27,14 @@ cd путь до папки с игрой
 после вставить 
 
 ```cmd
-LonelyKitty.py
+python LonelyKitty.py
 ```
 
 ```cmd
-RuHNet.py
+python RuHNet.py
 ```
 
 ```cmd
-
-AltBank.py
-``
+python AltBank.py
+```
 
