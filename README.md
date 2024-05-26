@@ -7,7 +7,9 @@
 
 ## Установка библиотек:
 Для более простой и быстрой установки рекомендуется использовать ```requirements.txt```
-                          ```pip install -r requirements.txt```
+                             ```python
+                          pip install -r requirements.txt
+                          ```
                           
 Или же установить пакеты вручную используя
   ```python
