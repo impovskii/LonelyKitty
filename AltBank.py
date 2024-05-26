@@ -15,7 +15,7 @@ pygame.init()
 
 init()
 
-pygame.mixer.music.load("AltBankRofl.mp3")
+pygame.mixer.music.load("game_files/sound/AltBankRofl.mp3")
 pygame.mixer.music.play(-1)
 
 fake = Faker("RU")
@@ -28,11 +28,11 @@ def startmoneybox():
     tprint("Alt   Bank")
 
 
-    with open('info.json', 'r') as json_file:
+    with open('game_files/json/info.json', 'r') as json_file:
         info = json.load(json_file)
         money = info['money']
 
-    with open('arrears.json', 'r') as json_file:
+    with open('game_files/json/arrears.json', 'r') as json_file:
         arrears = json.load(json_file)
         studies = arrears['studies']
         paul = arrears['paul']
@@ -60,7 +60,7 @@ def startbalance():
     os.system('cls||clear')
     tprint("Alt   Bank")
     print("")
-    with open('info.json', 'r') as json_file:
+    with open('game_files/json/info.json', 'r') as json_file:
         info = json.load(json_file)
         money = info['money']
     print(f"Кошелек: {money}₽")
@@ -106,7 +106,7 @@ def startbank():
     elif random_num == 15:
         print(Fore.RED +"       Самые быстрые коллекторы" + Style.RESET_ALL)
     elif random_num == 16:
-        print(Fore.YELLOW + f"      Доброй ночи{Name}" + Style.RESET_ALL)
+        print(Fore.YELLOW + f"      Доброй ночи, {Name}!" + Style.RESET_ALL)
 
 
     print("")

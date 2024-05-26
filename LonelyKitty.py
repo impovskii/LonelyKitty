@@ -9,7 +9,6 @@ import wget
 import pygame
 import random
 import json
-import webbrowser
 from matplotlib import pyplot as plt
 
 
@@ -18,15 +17,15 @@ pygame.init()
 
 init()
 
-pygame.mixer.music.load("system.mp3")
+pygame.mixer.music.load("game_files/sound/system.mp3")
 pygame.mixer.music.play(-1)
 
 fake = Faker("RU")
 
 url_img = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT73GlitgyBwbdb2m-s3m8snu2Y9cm0T0OyDtEXJo2fwENstzIH656TdXaooMWE_RjTEH4&usqp=CAU"
-sound_error = pygame.mixer.Sound('error2.mp3')
-sound_sell = pygame.mixer.Sound('sell.mp3')
-sound_horror = pygame.mixer.Sound('horror.mp3')
+sound_error = pygame.mixer.Sound('game_files/sound/error2.mp3')
+sound_sell = pygame.mixer.Sound('game_files/sound/sell.mp3')
+sound_horror = pygame.mixer.Sound('game_files/sound/horror.mp3')
 
 
 cat1 = " |\_/|"
@@ -77,7 +76,7 @@ def startrping():
 
 def startorder():
     os.system("cls||clear")
-    with open('data.json', 'r') as json_file:
+    with open('game_files/json/data.json', 'r') as json_file:
         data = json.load(json_file)
         order_name = data['name']
         order_prise = data['prise']
@@ -96,40 +95,40 @@ def startorder():
 
 def dataplus():
         #изменяем активность заказа
-    with open('data.json', 'r') as file:
+    with open('game_files/json/data.json', 'r') as file:
         data = json.load(file)
 
         data['relevance'] = False
         data_prise = data['prise']
 
-    with open('data.json', 'w') as file:
+    with open('game_files/json/data.json', 'w') as file:
         json.dump(data, file)
         #изменяем количество выполненых заказов и изменяем баланс
-    with open('info.json', 'r') as file:
+    with open('game_files/json/info.json', 'r') as file:
         data = json.load(file)
 
         data['completed_orders'] += 1
         data['money'] += data_prise
 
-    with open('info.json', 'w') as file:
+    with open('game_files/json/info.json', 'w') as file:
         json.dump(data, file, indent=4)
 
 
 def starthack():
     os.system('cls||clear')
 
-    with open('data.json', 'r') as json_file:
+    with open('game_files/json/data.json', 'r') as json_file:
         data = json.load(json_file)
         order_relevance = data['relevance']
 
-    with open('info.json', 'r') as json_file:
+    with open('game_files/json/info.json', 'r') as json_file:
         info = json.load(json_file)
         completed_orders = info['completed_orders']
         money = info['money']
 
     if completed_orders == 13:
         sound_horror.play()
-        img13 = plt.imread('img/images.jpeg')
+        img13 = plt.imread('game_files/img/images.jpeg')
         plt.imshow(img13)
         plt.show()
         time.sleep(22)
@@ -309,9 +308,10 @@ def starthack():
                 time.sleep(1)
                 starthack()
 
+        sound_sell.play()
         print("Вы успешно выполнили заказ!")
         dataplus()
-
+        a = input("$ ")
         console()
 
     else:

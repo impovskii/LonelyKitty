@@ -20,10 +20,10 @@ Name = os.getlogin()
 
 init()
 
-pygame.mixer.music.load("system.mp3")
+pygame.mixer.music.load("game_files/sound/system.mp3")
 pygame.mixer.music.play(-1)
 
-sound_order = pygame.mixer.Sound('order.mp3')
+sound_order = pygame.mixer.Sound('game_files/sound/order.mp3')
 
 
 def startsearch():
@@ -60,7 +60,7 @@ def startsearch():
 
     data = {'name': random_name, 'prise': random_prise, 'relevance': True}
 
-    with open('data.json', 'w') as file:
+    with open('game_files/json/data.json', 'w') as file:
         json.dump(data, file)
 
     a = input("$ ")
@@ -70,7 +70,7 @@ def startsearch():
 def startinfo():
     os.system('cls||clear')
 
-    with open('info.json', 'r') as json_file:
+    with open('game_files/json/info.json', 'r') as json_file:
         info = json.load(json_file)
         comp_order = info['completed_orders']
 
