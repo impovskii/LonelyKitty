@@ -6,6 +6,10 @@
 Для игры вам потребуется установленный python3, compiler, pip и куча библиотек
 
 ## Установка библиотек:
+Для более простой и быстрой установки рекомендуется использовать ```requirements.txt```
+                          ```pip install -r requirements.txt```
+                          
+Или же установить пакеты вручную используя
   ```python
 pip install progress.bar time os art colorama tabulate faker wget pygame random json matplotlib
 ```
