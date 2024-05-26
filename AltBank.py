@@ -17,6 +17,7 @@ init()
 
 pygame.mixer.music.load("game_files/sound/AltBankRofl.mp3")
 pygame.mixer.music.play(-1)
+sound_dengi_gde = pygame.mixer.Sound('game_files/sound/dengi_gde.mp3')
 
 fake = Faker("RU")
 
@@ -116,7 +117,11 @@ def startbank():
         startbalance()
     elif a == "moneybox":
         startmoneybox()
+    elif a == "dengi":
+        sound_dengi_gde.play()
+        startbank()
     else:
+        sound_error.play()
         print("Неккоректно")
         time.sleep(0.5)
         startbank()

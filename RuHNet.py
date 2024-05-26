@@ -24,6 +24,7 @@ pygame.mixer.music.load("game_files/sound/system.mp3")
 pygame.mixer.music.play(-1)
 
 sound_order = pygame.mixer.Sound('game_files/sound/order.mp3')
+sound_error = pygame.mixer.Sound('game_files/sound/error2.mp3')
 
 
 def startsearch():
@@ -99,6 +100,7 @@ def startnet():
     elif a =="feedback":
         startmyaccount()
     else:
+        sound_error.play()
         print("Неккоректно")
         time.sleep(0.5)
         startnet()

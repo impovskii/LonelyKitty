@@ -26,6 +26,7 @@ url_img = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT73GlitgyBwbdb2
 sound_error = pygame.mixer.Sound('game_files/sound/error2.mp3')
 sound_sell = pygame.mixer.Sound('game_files/sound/sell.mp3')
 sound_horror = pygame.mixer.Sound('game_files/sound/horror.mp3')
+sound_minecraft = pygame.mixer.Sound('game_files/sound/minecraft.mp3')
 
 
 cat1 = " |\_/|"
@@ -336,6 +337,26 @@ def console():
         starthackeasy()
     elif a == "order":
         startorder()
+    elif a == "minecraft":
+        sound_minecraft.play()
+        minecraft = open("minecraft.txt", "w+")
+        minecraft.write("⠀⠀⠀⠀⠀⠀⢀⠀⠀⠀⠀⠀⠀⢠⡆⠀⠀⠀⠀⠀⠀⡀⠀⠀⠀⠀⠀⠀⠀⠀" + "\n")
+        minecraft.write("⠀⠀⠀⠀⠀⠀⠈⣷⣄⠀⠀⠀⠀⣾⣷⠀⠀⠀⠀⣠⣾⠃⠀⠀⠀⠀⠀⠀⠀⠀" + "\n")
+        minecraft.write("⠀⠀⠀⠀⠀⠀⠀⢿⠿⠃⠀⠀⠀⠉⠉⠁⠀⠀⠐⠿⡿⠀⠀⠀⠀⠀⠀⠀⠀⠀" + "\n")
+        minecraft.write("⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣠⣤⣤⣶⣶⣶⣤⣤⣄⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀" + "\n")
+        minecraft.write("⠀⠀⠀⠀⠀⢀⣤⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣦⣄⠀⠀⠀⠀⠀⠀" + "\n")
+        minecraft.write("⠀⠀⠀⣠⣶⣿⣿⡿⣿⣿⣿⡿⠋⠉⠀⠀⠉⠙⢿⣿⣿⡿⣿⣿⣷⣦⡀⠀⠀⠀" + "\n")
+        minecraft.write("⠀⢀⣼⣿⣿⠟⠁⢠⣿⣿⠏⠀⠀⢠⣤⣤⡀⠀⠀⢻⣿⣿⡀⠙⢿⣿⣿⣦⠀⠀" + "\n")
+        minecraft.write("⣰⣿⣿⡟⠁⠀⠀⢸⣿⣿⠀⠀⠀⢿⣿⣿⡟⠀⠀⠈⣿⣿⡇⠀⠀⠙⣿⣿⣷⡄" + "\n")
+        minecraft.write("⠈⠻⣿⣿⣦⣄⠀⠸⣿⣿⣆⠀⠀⠀⠉⠉⠀⠀⠀⣸⣿⣿⠃⢀⣤⣾⣿⣿⠟⠁" + "\n")
+        minecraft.write("⠀⠀⠈⠻⣿⣿⣿⣶⣿⣿⣿⣦⣄⠀⠀⠀⢀⣠⣾⣿⣿⣿⣾⣿⣿⡿⠋⠁⠀⠀" + "\n")
+        minecraft.write("⠀⠀⠀⠀⠀⠙⠻⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠛⠁⠀⠀⠀⠀⠀" + "\n")
+        minecraft.write("⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠛⠛⠿⠿⠿⠿⠿⠿⠛⠋⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀" + "\n")
+        minecraft.write("⠀⠀⠀⠀⠀⠀⠀⢰⣷⡦⠀⠀⠀⢀⣀⣀⠀⠀⠀⢴⣾⡇⠀⠀⠀⠀⠀⠀⠀⠀" + "\n")
+        minecraft.write("⠀⠀⠀⠀⠀⠀⠀⣸⠟⠁⠀⠀⠀⠘⣿⡇⠀⠀⠀⠀⠙⢷⠀⠀⠀⠀⠀⠀⠀⠀" + "\n")
+        minecraft.write("⠀⠀⠀⠀⠀⠀⠀⠁⠀⠀⠀⠀⠀⠀⠻⠀⠀⠀⠀⠀⠀⠈⠀⠀⠀⠀⠀⠀⠀⠀" + "\n")
+        minecraft.close()
+        console()
     else: 
         print("Неккоректно")
         time.sleep(0.5)
