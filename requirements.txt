@@ -1,0 +1,8 @@
+progress.bar
+art
+colorama
+tabulate
+faker
+wget
+pygame
+matplotlib
