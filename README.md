@@ -20,20 +20,20 @@ pip install progress.bar art colorama tabulate faker wget pygame matplotlib
 ```
 
 ## Запуск
-Чтобы запустить игру вам необходимо зайти в cmd, перейти в папку с игрой при помощи команды   
+Для начала вам необходимо перейти в каталог с игрой:
 ```cmd
 cd путь до папки с игрой
 ```
-после вставить 
+Чтобы запустить LonelyKitty, выполните команду:
 
 ```cmd
 python LonelyKitty.py
 ```
-
+Чтобы запустить RuHNet, выполните команду:
 ```cmd
 python RuHNet.py
 ```
-
+Чтобы запустить AltBank, выполните команду:
 ```cmd
 python AltBank.py
 ```
