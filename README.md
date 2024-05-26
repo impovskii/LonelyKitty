@@ -4,6 +4,10 @@
 
 # Что нужно, чтобы начать играть 
 Для игры вам потребуется установленный python3, compiler, pip и куча библиотек
+
+```python
+pip install progress.bar
+```
 # Список библиотек:
   1. progress.bar
   2. time
