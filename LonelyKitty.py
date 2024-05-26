@@ -9,6 +9,8 @@ import wget
 import pygame
 import random
 import json
+import webbrowser
+from matplotlib import pyplot as plt
 
 
 pygame.mixer.init()
@@ -21,10 +23,10 @@ pygame.mixer.music.play(-1)
 
 fake = Faker("RU")
 
-url_img = "https://i.pinimg.com/564x/18/88/2d/18882de68a593383dfdc20b3eef1adc0.jpg"
-
+url_img = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT73GlitgyBwbdb2m-s3m8snu2Y9cm0T0OyDtEXJo2fwENstzIH656TdXaooMWE_RjTEH4&usqp=CAU"
 sound_error = pygame.mixer.Sound('error2.mp3')
 sound_sell = pygame.mixer.Sound('sell.mp3')
+sound_horror = pygame.mixer.Sound('horror.mp3')
 
 
 cat1 = " |\_/|"
@@ -125,7 +127,12 @@ def starthack():
         completed_orders = info['completed_orders']
         money = info['money']
 
-    if completed_orders == 3:
+    if completed_orders == 13:
+        sound_horror.play()
+        img13 = plt.imread('img/images.jpeg')
+        plt.imshow(img13)
+        plt.show()
+        time.sleep(22)
         furst_file = open("Тестордеры.txt", "w+")
         furst_file.write(deadcat1 + "\n")
         furst_file.write(deadcat2 + "\n")
