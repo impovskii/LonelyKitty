@@ -20,7 +20,7 @@ pip install progress.bar art colorama tabulate faker wget pygame matplotlib
 ```
 
 ## Запуск
-Для начала вам необходимо перейти в каталог с игрой:
+### Для начала вам необходимо перейти в каталог с игрой:
 ```cmd
 cd путь до папки с игрой
 ```
