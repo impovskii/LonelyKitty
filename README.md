@@ -16,6 +16,7 @@
   9. pygame
   10. random
   11. json
+  12. matplotlib
 # Как начать играть
 Чтобы запустить игру вам нужно зайти в cmd, перейти в папку с игрой при помощи команды ```cd "путь до игры"``` после вставить ```python LonelyKitty.py```, ```python RuHNet.py```, ```python AltBank.py```
 
