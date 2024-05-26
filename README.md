@@ -8,7 +8,7 @@
 ```python
 pip install progress.bar
 ```
-# Установка библиотек:
+## Установка библиотек:
   ```python
 pip install progress.bar
 ```
