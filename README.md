@@ -11,9 +11,9 @@
 pip install -r requirements.txt
 ```
                           
-Или же установить пакеты вручную используя
+Или же установить пакеты вручную 
   ```python
-pip install progress.bar time os art colorama tabulate faker wget pygame random json matplotlib
+pip install progress.bar art colorama tabulate faker wget pygame matplotlib
 ```
 # Как начать играть
 Чтобы запустить игру вам нужно зайти в cmd, перейти в папку с игрой при помощи команды ```cd "путь до игры"``` после вставить ```python LonelyKitty.py```, ```python RuHNet.py```, ```python AltBank.py```
