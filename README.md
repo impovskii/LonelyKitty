@@ -1,6 +1,7 @@
 # LonelyKitty
 ![Python 3.6, 3.7, 3.8](http://img.shields.io/pypi/pyversions/clubhouse?color=blueviolet)
-![Pre-Alpha]
+![Static Badge](https://img.shields.io/badge/Pre-Alpha)
+
 
 «LonelyKitty» — компьютерная игра в первом своем роде жанра cmd-horror, разработанная российской инди студией **"GWorkT"**
 
