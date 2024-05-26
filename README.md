@@ -26,15 +26,16 @@ cd путь до папки с игрой
 ```
 после вставить 
 
-```python
+```cmd
 LonelyKitty.py
 ```
 
-```python 
+```cmd
 RuHNet.py
 ```
 
-```python 
+```cmd
+
 AltBank.py
 ``
 
